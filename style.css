@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+    background-image: url(" https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/superover-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+}
+#logo{
+    width: 200px;
+    margin-top: 35px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    margin: 10vh auto;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: 80px;
+    font-weight: 800;
+}
+.button{
+    width: 50px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.score{
+    padding: 35px;
+    border-radius: 25px;
+    margin: 50px;
+}
+#team1{
+    background-color:#0A4995 ;
+}
+#team2{
+    background-color: #469E2F;
+}
+.balls{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ball{
+    border-radius: 50%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    color: black;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 5px;
+}
+.scoreboard{
+    margin-top: 5px;
+    font-size: xx-large;
+    font-weight: 900;
+}
+.button:active{
+    animation: clickbutton 0.1s ease-in-out;
+}
+@keyframes clickbutton {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
