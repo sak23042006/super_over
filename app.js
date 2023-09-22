@@ -26,7 +26,7 @@ var team2Score_initial = 0;
 
 var team1Wicket_initial = 0;
 
-var team1Wicket_initial = 0;
+var team2Wicket_initial = 0;
 
 var balls1_initial = 0;
 
@@ -42,7 +42,6 @@ strike.addEventListener('click', function () {
 
   var random =
     possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length)];
-  console.log(random);
   if (turn == 1) {
     //india batting
     balls1_initial++;
@@ -59,11 +58,12 @@ strike.addEventListener('click', function () {
     if (balls1_initial == 6 || team1Wicket > 2) {
       turn = 2;
     }
+    update1();
   }
-  console.log(team1Wicket_initial);
-  update1();
 });
 function update1() {
   team1Score.innerHTML = team1Score_initial;
   team1Wicket.innerHTML = team1Wicket_initial;
+  team2Score.innerHTML = team2Score_initial;
+  team2Wicket.innerHTML = team2Wicket_initial;
 }
