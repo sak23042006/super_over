@@ -44,6 +44,29 @@ function strikeButtonClicked(){
   strikeAudio.play()
 
   var random = possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length)];
+
+  if (turn == 2) {
+    //india batting
+    balls2_initial++;
+    var ball = document.querySelector(
+      `#team2-supervisior div:nth-child(${balls2_initial})`
+    );
+    ball.innerHTML = random;
+  
+    if (random == 'w') {
+      team2Wicket_initial++;
+    } else {
+      team2Score_initial += random;
+    }
+    update()
+          if(team2Score_initial > team1Score_initial || team2Wicket == 2 || balls2_initial ==6 ){
+              turn = 3;
+              setTimeout(()=>{
+                  gameOver();
+        },100)
+      }
+    }
+
   if (turn == 1) {
     //india batting
     balls1_initial++;
@@ -57,32 +80,11 @@ function strikeButtonClicked(){
     } else {
       team1Score_initial += random;
     }
-    if (balls1_initial > 6 || team1Wicket_initial ==2) {
+    if (balls1_initial == 6 || team1Wicket_initial ==2) {
       turn = 2;
     }
   update()
 }
-if (turn == 2) {
-  //india batting
-  balls2_initial++;
-  var ball = document.querySelector(
-    `#team2-supervisior div:nth-child(${balls2_initial})`
-  );
-  ball.innerHTML = random;
-
-  if (random == 'w') {
-    team2Wicket_initial++;
-  } else {
-    team2Score_initial += random;
-  }
-  update()
-        if(team2Score_initial > team1Score_initial || team2Wicket == 2 || balls2_initial ==6 ){
-            turn = 3;
-            setTimeout(()=>{
-                gameOver();
-      },100)
-    }
-  }
 
 };
 function update() {
