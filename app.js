@@ -57,7 +57,7 @@ function strikeButtonClicked(){
     } else {
       team1Score_initial += random;
     }
-    if (balls1_initial == 6 || team1Wicket_initial > 2) {
+    if (balls1_initial == 6 || team1Wicket_initial ==2) {
       turn = 2;
     }
   update()
